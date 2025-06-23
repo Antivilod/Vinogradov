@@ -17,4 +17,4 @@ java -cp src Main
 markdown
 
 ### Требования:
-- Java 11
+- Java 11+
