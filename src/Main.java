@@ -1,8 +1,14 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Выберите задание (1, 2 или 3): ");
+        while (!scanner.hasNextInt()) {
+            System.out.println("Пожалуйста, введите число (1, 2 или 3): ");
+            scanner.next(); // очистить неправильный ввод
+        }
         int choice = scanner.nextInt();
         scanner.nextLine(); // consume newline
 
@@ -23,4 +29,3 @@ public class Main {
         scanner.close();
     }
 }
-
