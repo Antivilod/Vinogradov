@@ -1,9 +1,9 @@
+import java.util.Scanner;
+
 public class Task1 {
     public static void run(Scanner scanner) {
-        System.out.print("Введите первое целое число (a): ");
-        int a = scanner.nextInt();
-        System.out.print("Введите второе целое число (b): ");
-        int b = scanner.nextInt();
+        int a = readInt(scanner, "Введите первое целое число (a): ");
+        int b = readInt(scanner, "Введите второе целое число (b): ");
 
         // Сравнение
         if (a > b) {
@@ -23,5 +23,15 @@ public class Task1 {
         } else {
             System.out.println("Деление на ноль невозможно");
         }
+    }
+
+    private static int readInt(Scanner scanner, String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextInt()) {
+            System.out.println("Пожалуйста, введите целое число.");
+            scanner.next(); // очистить неправильный ввод
+            System.out.print(prompt);
+        }
+        return scanner.nextInt();
     }
 }
