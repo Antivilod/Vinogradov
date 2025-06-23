@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Task2 {
     public static void run(Scanner scanner) {
         System.out.print("Введите первую строку: ");
